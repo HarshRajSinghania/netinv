@@ -1,0 +1,20 @@
+{
+  "scanning": "Scanning {count} addresses on {target}...",
+  "progress": "{done}/{total} checked",
+  "found": "{count} device(s) found in {seconds}s.",
+  "none_found": "No device found. Check the target network and your firewall.",
+  "saved": "Results saved to {path}",
+  "col_ip": "IP address",
+  "col_hostname": "Hostname",
+  "col_mac": "MAC address",
+  "col_vendor": "Vendor",
+  "col_ports": "Open ports",
+  "col_latency": "Latency (ms)",
+  "report_title": "Network inventory",
+  "report_generated": "Generated on {date} by netinv {version}",
+  "report_search": "Filter devices...",
+  "unknown": "-",
+  "error_target": "Invalid target: {error}",
+  "error_ports": "Invalid port list: {error}",
+  "guessed_network": "No target given, using your local network: {network}"
+}

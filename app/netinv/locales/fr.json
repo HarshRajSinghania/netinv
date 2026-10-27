@@ -1,0 +1,20 @@
+{
+  "scanning": "Analyse de {count} adresses sur {target}...",
+  "progress": "{done}/{total} vérifiées",
+  "found": "{count} appareil(s) trouvé(s) en {seconds} s.",
+  "none_found": "Aucun appareil trouvé. Vérifiez le réseau cible et votre pare-feu.",
+  "saved": "Résultats enregistrés dans {path}",
+  "col_ip": "Adresse IP",
+  "col_hostname": "Nom d'hôte",
+  "col_mac": "Adresse MAC",
+  "col_vendor": "Fabricant",
+  "col_ports": "Ports ouverts",
+  "col_latency": "Latence (ms)",
+  "report_title": "Inventaire réseau",
+  "report_generated": "Généré le {date} par netinv {version}",
+  "report_search": "Filtrer les appareils...",
+  "unknown": "-",
+  "error_target": "Cible invalide : {error}",
+  "error_ports": "Liste de ports invalide : {error}",
+  "guessed_network": "Aucune cible indiquée, utilisation de votre réseau local : {network}"
+}
