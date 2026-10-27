@@ -1,5 +1,7 @@
 # Contribuer à netinv
 
+*English speakers: issues and pull requests in English are welcome too.*
+
 Merci de ton intérêt ! Toute contribution est bienvenue, même petite : une ligne dans la liste des fabricants, une traduction, une correction de faute ou un rapport de bug.
 
 ## Signaler un bug ou proposer une idée
@@ -56,7 +58,15 @@ Dans `app/netinv/exporters.py`, écris une fonction `to_<nom>(hosts, t) -> str` 
 
 ## Tester ta modification
 
-Depuis le dossier du dépôt :
+Depuis le dossier du dépôt, lance d'abord les tests automatiques (aucune installation nécessaire) :
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Ils sont aussi lancés automatiquement par GitHub Actions sur Windows, Linux et macOS à chaque pull request. Si tu ajoutes une fonction, ajoute un test dans `tests/`.
+
+Puis essaie l'outil :
 
 ```bash
 export PYTHONPATH=app          # Windows : set PYTHONPATH=app
