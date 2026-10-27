@@ -1,0 +1,10 @@
+# Scan reports contain your network's IP and MAC addresses: never publish them
+inventaire-reseau.html
+*.html
+*.csv
+*.json
+!app/netinv/locales/*.json
+
+__pycache__/
+*.py[cod]
+.venv/

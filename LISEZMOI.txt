@@ -1,0 +1,32 @@
+netinv - inventaire du reseau local
+===================================
+
+UTILISATION
+  Double-clique sur "scanner-reseau.bat".
+  - Appuie sur Entree pour scanner ton reseau actuel,
+    ou tape une plage, par exemple : 192.168.1.0/24  ou  192.168.1.10-50
+  - Le rapport "inventaire-reseau.html" s'ouvre dans ton navigateur
+    (il est remplace a chaque nouveau scan).
+
+PREREQUIS
+  Python 3.9 ou plus recent (winget install Python.Python.3.12).
+  Aucune autre installation, pas besoin d'etre administrateur.
+
+CE QUE L'OUTIL AFFICHE
+  Adresse IP, nom d'hote, adresse MAC, fabricant, ports ouverts, latence.
+  La MAC et le fabricant ne sont visibles que pour les appareils
+  du meme sous-reseau que ton PC (pas a travers un VPN ou un routeur).
+
+EN LIGNE DE COMMANDE (optionnel)
+  set PYTHONPATH=%CD%\app
+  py -m netinv scan 192.168.1.0/24 --lang fr
+  py -m netinv scan -p 22,80,443,8006 -o inventaire.csv
+  py -m netinv scan --help
+
+CONTENU DU DOSSIER
+  scanner-reseau.bat   le lanceur
+  app\netinv\          le code de l'outil
+    data\oui.txt       la liste des fabricants (prefixe MAC <TAB> nom)
+    locales\           les traductions
+
+A n'utiliser que sur des reseaux qui t'appartiennent ou que tu es autorise a scanner.
