@@ -21,14 +21,44 @@ COMMON_PORTS: dict[int, str] = {
     9100: "printer",
 }
 
+# Larger set of well-known services for naming, without affecting the default scan speed.
+KNOWN_SERVICES: dict[int, str] = {
+    **COMMON_PORTS,
+    25: "smtp",
+    110: "pop3",
+    143: "imap",
+    1883: "mqtt",
+    3306: "mysql",
+    5432: "postgresql",
+    5900: "vnc",
+    6379: "redis",
+    8123: "home-assistant",
+    8443: "https-alt",
+    32400: "plex",
+    27017: "mongodb",
+    9200: "elasticsearch",
+    11211: "memcached",
+    5672: "amqp",
+    15672: "rabbitmq",
+    5433: "postgresql-alt",
+    33060: "mysqlx",
+    8081: "http-alt2",
+    8444: "https-alt2",
+    8888: "http-alt3",
+    9000: "portainer",
+    9443: "portainer-https",
+    25565: "minecraft",
+    19132: "minecraft-be",
+}
+
 
 def service_name(port: int) -> str:
     """Return a human readable service name for a port, or '?' if unknown."""
-    return COMMON_PORTS.get(port, "?")
+    return KNOWN_SERVICES.get(port, "?")
 
 
 def parse_ports(spec: str) -> list[int]:
-    """Parse a port specification such as "22,80,8000-8005" into a sorted list.
+    """Parse a port specification such as \"22,80,8000-8005\" into a sorted list.
 
     Raises ValueError on invalid input.
     """
